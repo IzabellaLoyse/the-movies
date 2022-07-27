@@ -29,7 +29,7 @@ function SearchMovie() {
           onChange={(event) => setSearch(event.target.value)}
         />
         <Button type="submit">
-          <BiSearchAlt2 size={20} color="#F0F9FF" />
+          <BiSearchAlt2 size={25} color="#F0F9FF" />
         </Button>
       </Form>
     </ContainerSearch>

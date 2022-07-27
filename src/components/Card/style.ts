@@ -33,8 +33,9 @@ export const CardContent = styled.div`
 
   a {
     align-items: center;
-    background-color: var(--color-blue-500);
+    background-color: transparent;
     border-radius: 3px;
+    border: 1px solid var(--color-blue-500);
     color: var(--color-sky-50);
     display: inline-flex;
     font-size: 1.1rem;
@@ -47,6 +48,7 @@ export const CardContent = styled.div`
 
     &:hover {
       background-color: var(--color-blue-600);
+      color: var(--color-sky-50);
     }
   }
 `;

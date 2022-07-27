@@ -17,10 +17,10 @@ export const FormInput = styled.input`
   border-radius: var(--border-radius-global);
   border: none;
   color: var(--color-neutral-900);
-  height: 2rem;
+  height: 2.5rem;
   max-width: 100%;
   padding: 0.8rem;
-  width: 20rem;
+  width: 22rem;
 `;
 
 export const Button = styled.button`
@@ -28,9 +28,9 @@ export const Button = styled.button`
   border-radius: var(--border-radius-global);
   border: none;
   cursor: pointer;
-  height: 2rem;
+  height: 2.5rem;
   transition: 200ms ease-in-out;
-  width: 3rem;
+  width: 3.5rem;
 
   &:hover {
     background-color: var(--color-blue-600);
