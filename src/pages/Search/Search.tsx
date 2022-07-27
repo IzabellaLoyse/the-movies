@@ -13,7 +13,7 @@ function Search() {
   const queryParams = searchParams.get('q');
 
   const { data: movies, isLoading } = useFetch<IMovie>(
-    `search/movie/?${apiKey}&query=${queryParams}`,
+    `search/movie?${apiKey}&query=${queryParams}`,
     queryParams,
   );
 
