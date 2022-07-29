@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IStyleProps } from '../../interfaces/styleProps';
 
 export const CardContainer = styled.article`
   background-color: var(--color-black-900);
@@ -53,10 +54,11 @@ export const CardContent = styled.div`
   }
 `;
 
-export const CardTitle = styled.h3`
-  font-size: 1.2rem;
+export const CardTitle = styled.h3<IStyleProps>`
+  font-size: ${(props) => (props.isBigTitle ? '1.5rem' : '1.2rem')};
   font-weight: 700;
   padding-bottom: 0.5rem;
+  text-align: ${(props) => props.isBigTitle && 'center'};
 `;
 
 export const CardPopularity = styled.span`
@@ -69,8 +71,9 @@ export const CardPopularity = styled.span`
   }
 `;
 
-export const CardStar = styled.p`
+export const CardStar = styled.p<IStyleProps>`
   align-items: flex-start;
   display: inline-flex;
   gap: 0.2rem;
+  justify-content: ${(props) => props.hasAlignment && 'center'};
 `;

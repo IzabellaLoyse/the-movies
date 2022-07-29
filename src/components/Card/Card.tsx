@@ -22,27 +22,48 @@ function Card({
   const imageUrl = import.meta.env.VITE_IMG;
 
   return (
-    <CardContainer>
-      <CardImage>
-        <img
-          src={imageUrl + poster_path}
-          alt={'Imagem do cartaz do filme' + title}
-        />
-      </CardImage>
+    <>
+      {showLink ? (
+        <CardContainer>
+          <CardImage>
+            <img
+              src={imageUrl + poster_path}
+              alt={'Imagem do cartaz do filme' + title}
+            />
+          </CardImage>
 
-      <CardContent>
-        <CardTitle>{title}</CardTitle>
-        <CardPopularity>
-          Popularidade: <strong>{popularity}</strong>{' '}
-        </CardPopularity>
+          <CardContent>
+            <CardTitle>{title}</CardTitle>
+            <CardPopularity>
+              Popularidade: <strong>{popularity}</strong>{' '}
+            </CardPopularity>
 
-        <CardStar>
-          <FaStar color="#FACC15" size={20} /> {vote_average}
-        </CardStar>
+            <CardStar>
+              <FaStar color="#FACC15" size={20} /> {vote_average}
+            </CardStar>
 
-        {showLink && <Link to={`/movie/${id}`}>Detalhes</Link>}
-      </CardContent>
-    </CardContainer>
+            <Link to={`/movie/${id}`}>Detalhes</Link>
+          </CardContent>
+        </CardContainer>
+      ) : (
+        <section>
+          <CardImage>
+            <img
+              src={imageUrl + poster_path}
+              alt={'Imagem do cartaz do filme' + title}
+            />
+          </CardImage>
+
+          <CardContent>
+            <CardTitle isBigTitle={true}>{title}</CardTitle>
+
+            <CardStar hasAlignment={true}>
+              <FaStar color="#FACC15" size={20} /> {vote_average}
+            </CardStar>
+          </CardContent>
+        </section>
+      )}
+    </>
   );
 }
 

@@ -6,6 +6,7 @@ import SearchMovie from '../../components/SearchMovie/SearchMovie';
 import useFetch from '../../hooks/useFetch';
 import { IMovie } from '../../interfaces/movie';
 import Layout from '../../Layout/Layout';
+import { ResultSearch, TitleResults } from './style';
 
 function Search() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -21,9 +22,9 @@ function Search() {
     <>
       <Layout>
         <SearchMovie />
-        <h1>
-          Resultados da Busca para: <span>{queryParams}</span>
-        </h1>
+        <TitleResults>
+          Resultados da busca para: <ResultSearch>{queryParams}</ResultSearch>
+        </TitleResults>
 
         <Cards>
           {isLoading && <Loading />}

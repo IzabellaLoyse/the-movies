@@ -8,6 +8,11 @@ export interface TypeResultsMovies {
   poster_path?: string;
   vote_average?: number;
   popularity?: number;
+  revenue?: number;
+  tagline?: string;
+  budget?: number;
+  runtime?: number;
+  overview?: string;
 }
 
 export interface IMovieCardProps extends TypeResultsMovies {
