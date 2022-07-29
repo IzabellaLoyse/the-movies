@@ -11,7 +11,7 @@ import Card from '../../components/Card/Card';
 import Loading from '../../components/Loading/Loading';
 import useFetch from '../../hooks/useFetch';
 import { TypeResultsMovies } from '../../interfaces/movie';
-import Layout from '../../Layout/Layout';
+import Layout from '../../layout/Layout';
 
 function Movie() {
   const apiKey = import.meta.env.VITE_API_KEY;

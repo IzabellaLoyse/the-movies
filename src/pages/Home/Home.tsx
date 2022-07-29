@@ -6,7 +6,7 @@ import { Title } from './style';
 import Cards from '../../components/Cards/Cards';
 import Loading from '../../components/Loading/Loading';
 import SearchMovie from '../../components/SearchMovie/SearchMovie';
-import Layout from '../../Layout/Layout';
+import Layout from '../../layout/Layout';
 
 function Home() {
   const apiKey = import.meta.env.VITE_API_KEY;

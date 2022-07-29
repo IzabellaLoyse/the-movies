@@ -22,13 +22,21 @@ function Search() {
     <>
       <Layout>
         <SearchMovie />
-        <TitleResults>
-          Resultados da busca para: <ResultSearch>{queryParams}</ResultSearch>
-        </TitleResults>
+
+        {isLoading && <Loading />}
+
+        {movies?.results?.length === 0 ? (
+          <TitleResults>
+            Não foi encontrado nenhum resultado de busca para:{' '}
+            <ResultSearch>{queryParams}</ResultSearch>
+          </TitleResults>
+        ) : (
+          <TitleResults>
+            Resultados da busca para: <ResultSearch>{queryParams}</ResultSearch>
+          </TitleResults>
+        )}
 
         <Cards>
-          {isLoading && <Loading />}
-
           {movies?.results?.map((movie) => (
             <Card
               key={movie.id}
